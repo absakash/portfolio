@@ -32,15 +32,16 @@ const Home = () => {
     <div>
       <img className=" opacity-70" src={img} alt="" />
     <div>
-      b
+      hocce na 
+
     </div>
-      <div className="text-4xl font-bold p-2 text-black font-serif">
+      <div className="text-4xl font-bold p-2 text-black font-serif text-center ">
      
 
        <div>
-       <p>I'm a</p>
-      <p className="top-1/2 absolute">
-       <span className="typed">{text}</span>
+       <p className="absolute top-1/2 left-0">I'm a</p>
+      <p className="top-1/2 absolute left-24">
+       <span className="typed ">{text}</span>
       </p>
        </div>
       

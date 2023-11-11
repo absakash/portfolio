@@ -61,26 +61,28 @@ const Contact = () => {
         <div className="">
           <form className="p-5 shadow-xl" onSubmit={handleSubmit(onSubmit)}>
             {/* register your input into the hook by invoking the "register" function */}
-            <div className="flex gap-5 ">
-            <div>
+            <div className="flex gap-4 justify-center">
+            <div className="w-1/2">
               <input
                 placeholder="enter your name "
-                className="input input-bordered input-info "
+                className="input input-bordered input-info w-full"
                 defaultValue=""
                 {...register("name", { required: "name is required" })}
               />
               <p className="text-red-600">{errors?.name?.message}</p>
             </div>
-            <div>
+            <div className="w-1/2">
               <input
                 placeholder="enter your email "
-                className="input input-bordered input-info w-full"
+                className="input input-bordered input-info w-full "
                 defaultValue=""
                 {...register("email", { required: "email is required" })}
               />
               <p className="text-red-600">{errors?.email?.message}</p>
             </div>
             </div>
+           
+           
             <div  className="mt-2">
               <input
                 placeholder="Subject "
