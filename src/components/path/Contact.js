@@ -13,7 +13,7 @@ const Contact = () => {
   const onSubmit = (data) => console.log(data);
 
   return (
-    <div className="ml-14 mr-10 lg:mt-20">
+    <div className="ml-14 mr-10 mt-10">
       <div className="text-left">
         <h1 className="text-3xl font-semibold">Contact</h1>
         <h1 className="border-2 w-16 border-cyan-600"></h1>
@@ -25,7 +25,7 @@ const Contact = () => {
       </div>
 
       <div className="py-10 lg:flex gap-5 grid ">
-        <div className="lg:w-1/2 lg:p-10 w-full mt-2  p-3  shadow-xl ">
+        <div className="lg:w-1/2 p-10 w-full mt-2 shadow-xl ">
           <div className="flex mt-2 gap-5  hover:text-emerald-500">
             <Link className="">
               <FaLocationDot className="w-10 h-10 "></FaLocationDot>
@@ -61,8 +61,8 @@ const Contact = () => {
         <div className="">
           <form className="p-5 shadow-xl" onSubmit={handleSubmit(onSubmit)}>
             {/* register your input into the hook by invoking the "register" function */}
-            <div className="flex gap-4 justify-center">
-            <div className="w-1/2">
+            <div className="md:flex gap-4 justify-center ">
+            <div className="md:w-1/2 mb-2">
               <input
                 placeholder="enter your name "
                 className="input input-bordered input-info w-full"
@@ -71,7 +71,7 @@ const Contact = () => {
               />
               <p className="text-red-600">{errors?.name?.message}</p>
             </div>
-            <div className="w-1/2">
+            <div className="md:w-1/2">
               <input
                 placeholder="enter your email "
                 className="input input-bordered input-info w-full "

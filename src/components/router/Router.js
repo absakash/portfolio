@@ -5,6 +5,8 @@ import About from "../path/About";
 import Resume from "../path/Resume";
 import Contact from "../path/Contact";
 import Portfolio from "../path/Portfolio";
+import TailwindFeatures from "../path/TailwindFeatures";
+import Frame from "../path/Frame";
 
 const router=createBrowserRouter([
       {
@@ -12,7 +14,7 @@ const router=createBrowserRouter([
             element:<Main></Main>,
             children:[
                   {
-                        path:'/home',
+                        path:'/',
                         element: <Home></Home>
                   },
                   {
@@ -36,9 +38,17 @@ const router=createBrowserRouter([
                         element:<Contact></Contact>
                   },
                   {
+                        path:'/tailwind',
+                        element:<TailwindFeatures></TailwindFeatures>
+                  },
+                  // {
+                  //       path:'/frame',
+                  //       element:<Frame></Frame>
+                  // },
+                  {
                         path:'/*',
                         element:<div>not found yet </div>
-                  },
+                  }
 
                  
             ]

@@ -4,7 +4,7 @@ import me from "../images/hero-kbg.jpeg";
 import { Link } from "react-router-dom";
 const About = () => {
   return (
-    <div className="ml-14 mr-14">
+    <div className="ml-14 mr-14 md:mt-10 mt-5">
       <div >
         <h1 className="text-3xl font-bold text-left">About</h1>
         <h1 className="border w-16 border-2 border-teal-400"></h1>
@@ -20,7 +20,7 @@ const About = () => {
       <div className="lg:grid lg:grid-cols-2">
         <div className="flex justify-center mt-5">
           <img
-            className="h-[350px] w-4/5 rounded-3xl lg:h-2/3"
+            className="h-[350px] md:h-[400px] md:w-[450px]  w-4/5 rounded-3xl lg:h-2/3"
             src={me}
             alt=""
           />
@@ -117,7 +117,7 @@ const About = () => {
 
 
 
-      <div className="my-10">
+      <div className="mt-5 mb-5">
         <div className="text-left ">
           <h1 className="text-3xl font-semibold mt-6">Skills</h1>
           <h1 className="border w-16 border-2 border-teal-400"></h1>
@@ -127,7 +127,7 @@ const About = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-2 gap-1 text-left py-10">
+      <div className="grid md:grid-cols-2 gap-1 text-left py-10">
            <div>
             <div className="flex justify-between mr-20">
             <p>HTML</p>

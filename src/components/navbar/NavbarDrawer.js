@@ -13,22 +13,24 @@ import {
 import { FaNewspaper, FaMobileRetro, FaNoteSticky } from "react-icons/fa6";
 import myphot from "../images/c2d5051c-fe8b-44e4-9fd7-bbdac67ee494.jpeg";
 import { Link, Outlet } from "react-router-dom";
+import { Avatar } from "keep-react";
 const NavbarDrawer = () => {
-  const [theme,setTheme]=useState(localStorage.getItem('theme')? localStorage.getItem('theme'): "light")
-   useEffect(()=>{
-    localStorage.setItem('theme',theme)
-    const localTheme=localStorage.getItem('theme')
-    document.querySelector('html').setAttribute('data-theme',localTheme)
-  },[theme])
+  const [theme, setTheme] = useState(
+    localStorage.getItem("theme") ? localStorage.getItem("theme") : "light"
+  );
+  useEffect(() => {
+    localStorage.setItem("theme", theme);
+    const localTheme = localStorage.getItem("theme");
+    document.querySelector("html").setAttribute("data-theme", localTheme);
+  }, [theme]);
 
-const handleToggle=e=>{
-  if(e.target.checked){
-    setTheme('dark')
-
-  }else{
-    setTheme('light')
-  }
-}
+  const handleToggle = (e) => {
+    if (e.target.checked) {
+      setTheme("dark");
+    } else {
+      setTheme("light");
+    }
+  };
 
   const handleNavLinkClick = () => {
     const checkbox = document.getElementById("my-drawer");
@@ -44,7 +46,7 @@ const handleToggle=e=>{
         <Outlet></Outlet>
         <label
           htmlFor="my-drawer"
-          className="lg:hidden flex justify-end absolute top-0 right-0"
+          className="lg:hidden flex justify-end absolute top-2 right-4 bg-cyan-300 p-3 rounded-3xl"
         >
           <FaBars></FaBars>
         </label>
@@ -83,18 +85,23 @@ const handleToggle=e=>{
             </label>
           </div>
 
-          <div className="flex justify-center">
-            <img
-              className="w-32 h-32 rounded-[50%] ring ring-green-500 p-1"
-              src={myphot}
-              alt=""
-            />
+          <div>
+      
           </div>
+         
+            <div className="flex justify-center">
+              <img
+                className="w-32 h-32 rounded-[50%] ring ring-green-500 p-1"
+                src={myphot}
+                alt=""
+              />
+            </div>
+        
 
           <p className="text-2xl font-serif mt-2">Akash Biswas</p>
           <p className="text-sm font-serif">Junior Developer</p>
 
-          <div className="flex gap-6 justify-center mt-3 ">
+          <div className="flex gap-6 justify-center mt-3 relative">
             <Link target="blank" to="https://www.facebook.com/sskybiswas">
               <FaFacebook className="w-6 h-6 hover:scale-150  hover:text-emerald-500 "></FaFacebook>
             </Link>
@@ -119,7 +126,7 @@ const handleToggle=e=>{
               <Link
                 onClick={handleNavLinkClick}
                 htmlFor="my-drawer"
-                to="/home"
+                to="/"
                 className=" hover:text-emerald-500 hover:scale-105"
               >
                 <FaHome></FaHome>
@@ -181,8 +188,8 @@ const handleToggle=e=>{
               </Link>
             </li>
 
-            <li>
-              <p className="mt-48 text-red-600">
+            <li className="absolute bottom-5 text-center">
+              <p className=" text-red-600 font-bold">
                 © Copyright iPortfolio Designed by Akash Biswas
               </p>
             </li>
